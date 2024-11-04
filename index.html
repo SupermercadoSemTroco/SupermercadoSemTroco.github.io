@@ -17,11 +17,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
-
 
 <nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
 
@@ -75,10 +75,11 @@
                     <h2><strong>Sem Troco</strong></h2>
                 </div>
                 <p class="lead">Conheça um pouco do supermercado</p>
-                <p class="mb-5">Fundado 19 anos atrás pelo Sr. Odair Silvério, o mesmo vem trabalhando para que a cada
-                    dia cresça mais um pouco, anos se passaram e foi inaugurada a nova loja. O Supermercado Sem Troco
-                    vem caminhando com muita transparência e competência fazendo que cada dia aconteça melhorias em seu
-                    estabelecimento e seus funcionários que se dedicam para fazer seu dever todos os dias.</p>
+                <p class="mb-5 text-justify">Há <span id="years"></span> anos, o Sr. Odair Silvério fundou o Supermercado Sem Troco com o compromisso de crescimento contínuo e qualidade.
+                    Desde então, temos trabalhado todos os dias para aprimorar nossa estrutura e expandir nossos serviços. Com a abertura de nossa nova loja,
+                    seguimos em frente com transparência e competência, valorizando cada melhoria no atendimento e no ambiente de trabalho.
+                    Nossa equipe dedica-se com empenho, oferecendo o melhor a cada cliente que passa por aqui.
+                </p>
             </div>
         </div>
     </div>
@@ -103,7 +104,7 @@
                 <span class="icon-truck"></span>
               </span>
                     <h3 class="mb-4">Entrega Domiciliar</h3>
-                    <p>Entregamos suas compras em sua casa.</p>
+                    <p>Receba suas compras no conforto de sua casa com nosso serviço rápido e prático de entrega.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 text-center mb-5">
@@ -112,7 +113,7 @@
                 <span class="icon-mobile"></span>
               </span>
                     <h3 class="mb-4">Recarga de celular</h3>
-                    <p>Recarregamos celulares de qualquer operadora, e também temos recarga de cartão de ônibus.</p>
+                    <p>Oferecemos recargas para todas as operadoras de celular e para cartões de transporte público.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 text-center mb-5">
@@ -121,7 +122,7 @@
                 <span><img src="images/meat-icon.png" style="width: 50px;"></span>
               </span>
                     <h3 class="mb-4">Açougue</h3>
-                    <p>O melhor açougue da região você só encontra aqui, faça sua encomenda!</p>
+                    <p>Conte com o melhor açougue da região! Encomende carnes frescas e de qualidade para sua família.</p>
                 </div>
             </div>
 
@@ -131,8 +132,7 @@
                 <span style="align-items: center"><img src="images/product-cion.png" style="width: 50px"></span>
               </span>
                     <h3 class="mb-4">Produtos em geral</h3>
-                    <p>Aqui você encontra uma variedade de produtos para alimentação, higiene pessoal, limpeza de casa,
-                        e muito mais!</p>
+                    <p>Encontre uma ampla variedade de produtos: alimentos, itens de higiene pessoal, produtos de limpeza, e muito mais!</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 text-center mb-5">
@@ -141,7 +141,7 @@
                 <span><img src="images/ferramenta-icon.png" style="width: 50px;"></span>
               </span>
                     <h3 class="mb-4">Ferramentas e utilidades domésticas</h3>
-                    <p>Temos também uma variedade de itens que podem ser usados para a manutenção de casa.</p>
+                    <p>Dispomos de uma linha completa de ferramentas e utilidades para facilitar a manutenção de sua casa.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 text-center mb-5">
@@ -150,8 +150,7 @@
                 <span class="icon-credit-card"></span>
               </span>
                     <h3 class="mb-4">Formas de pagamento</h3>
-                    <p>Aceitamos os principais cartões, dinheiro, e parcelamos suas compras em até 3X sem juros (Apenas
-                        valores acima de R$ 100,00).</p>
+                    <p>Aceitamos os principais cartões, dinheiro e parcelamos suas compras em até 3x sem juros (para valores acima de R$ 100,00).</p>
                 </div>
             </div>
 
@@ -169,7 +168,7 @@
             </div>
 
             <div class="col-md-7 mb-5 mb-md-0">
-                <div id="googleMap" style="width:100%;height:400px;"></div>
+                <div id="map" style="width:100%;height:400px;"></div>
             </div>
             <div class="col-md-5 pl-md-5">
                 <h3 class="mb-5">Informações para contato</h3>
@@ -205,8 +204,8 @@
                 <p>
                     <a target="_blank" href="https://www.facebook.com/supermercadosemtroco/" class="social-item"><span
                             class="icon-facebook2"></span></a>
-                    <a target="_blank" href="https://pt.foursquare.com/v/5588d036498e8e4871c2d552" class="social-item"><span
-                            class="icon-foursquare2"></span></a>
+                    <a target="_blank" href="https://www.instagram.com/supermercadosemtroco/" class="social-item"><span
+                            class="icon-instagram2"></span></a>
                 </p>
             </div>
         </div>
@@ -235,28 +234,31 @@
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script src="js/custom.js"></script>
-
-<!-- Google Map -->
-
-<script src="js/google-map.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-    function myMap() {
-        /*var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(-20.5204129,-54.6029242),
-            title:"Supermercado Sem Troco"
-        });*/
+	function updateYears() {
+		const foundationYear = 1996; // Ano de fundação
+		const currentYear = new Date().getFullYear();
+		document.getElementById('years').textContent = currentYear - foundationYear;
+	}
 
-        var mapProp = {
-            center: new google.maps.LatLng(-20.5204129, -54.6029242),
-            zoom: 18,
-        };
-        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-        //marker.setMap(map);
+    function loadMap() {
+        var map = L.map('map').setView([-20.520260, -54.602861], 17);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-20.520260, -54.602861]).addTo(map)
+            .bindPopup('<a href="https://www.google.com.br/maps/place/Supermercado+Sem+Troco/@-20.520188,-54.6028652,15z/data=!4m5!3m4!1s0x0:0x55fc3122847bfa3c!8m2!3d-20.520188!4d-54.6028652" target="_blank">Supermercado Sem Troco</a>')
+            .openPopup();
+    }
+
+    window.onload = function () {
+		loadMap();
+		updateYears();
     }
 </script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfn0nkJkS7vn5ebcp3XgHyfdQ4KE8b4j0&callback=myMap"></script>
-
 </body>
 </html>
