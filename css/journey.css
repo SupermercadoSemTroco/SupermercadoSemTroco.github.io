@@ -1,0 +1,43 @@
+/* A jornada das compras — direção e coreografia próprias do Sem Troco. */
+.convenience{padding:0;position:relative;background:#153d2d;overflow:visible}
+.convenience .fx-palco{background:radial-gradient(circle at 76% 44%,#295c3d 0,#1b4a34 38%,#153d2d 72%);overflow:hidden}
+.convenience-grid{height:100%;grid-template-columns:.83fr 1.17fr;gap:clamp(30px,4vw,65px)}
+.convenience-copy{position:relative;z-index:6;padding-block:70px}
+.convenience h2{font-size:clamp(53px,5.5vw,88px);line-height:.98;max-width:730px;margin:0 0 32px}
+.convenience-copy>p:not(.eyebrow){max-width:465px}
+.journey-caption{display:flex;align-items:baseline;gap:18px;min-height:42px;margin-top:35px;font-family:'Bricolage Grotesque',sans-serif}
+.journey-caption-number{font:800 11px 'DM Sans',sans-serif;letter-spacing:.17em;color:#d2e7b9}
+.journey-caption strong{font-size:clamp(20px,2vw,28px);line-height:1.15;letter-spacing:-.04em}
+.journey-cta{margin-top:32px}
+.journey-visual{position:relative;height:min(76vh,720px);min-height:500px;display:grid;place-items:center;isolation:isolate}
+.journey-orbit{position:absolute;inset:8% 4%;border:1px solid #bcd6a341;border-radius:50%;transform:rotate(-17deg);pointer-events:none}
+.orbit-inner{inset:19% 16%;border-color:#bcd6a326;transform:rotate(24deg)}
+.journey-word{position:absolute;color:#d4e9c0;font:800 clamp(18px,1.8vw,26px)/1 'Bricolage Grotesque',sans-serif;letter-spacing:-.045em;opacity:.75}
+.word-one{top:16%;left:2%;transform:rotate(-10deg)}.word-two{top:24%;right:4%;transform:rotate(8deg)}.word-three{bottom:19%;right:0;transform:rotate(-7deg)}
+.journey-visual .bag-art{width:290px;height:345px;margin:38px 0 0;align-self:auto;filter:drop-shadow(24px 38px 23px #071c1470);transform:rotate(-8deg);transform-origin:center 85%;z-index:2}
+.journey-visual .bag-shadow{position:absolute;z-index:-2;width:260px;height:55px;left:18px;bottom:-28px;background:#082a1c9c;filter:blur(18px);border-radius:50%}
+.journey-visual .bag-handle{left:90px;top:15px;width:110px;height:105px;border-width:14px;border-color:#e4b979;z-index:1;transform-origin:50% 100%}
+.bag-back{position:absolute;z-index:0;left:23px;top:96px;width:244px;height:224px;background:#aa7545;clip-path:polygon(8% 0,92% 0,100% 100%,0 100%)}
+.bag-mouth{position:absolute;z-index:1;left:40px;top:91px;width:210px;height:34px;border-radius:50%;background:#704b2f;box-shadow:inset 0 7px 7px #3f2b1e9e;transform-origin:center center}
+.journey-visual .bag-produce{z-index:2;width:90px;height:150px;left:auto;right:auto;top:auto;background:none;clip-path:none;border-radius:0;filter:drop-shadow(6px 12px 5px #122d1d66);transform-origin:center 75%}
+.journey-visual .bag-produce svg{width:100%;height:100%;display:block;overflow:visible}
+.journey-visual .produce-carrot{left:-44px;top:2px;transform:rotate(-32deg)}
+.journey-visual .produce-leaf{left:115px;top:-62px;width:126px;height:130px;transform:rotate(12deg)}
+.journey-visual .produce-baguette{right:-37px;top:-12px;width:76px;height:160px;transform:rotate(28deg)}
+.bag-front{position:absolute;z-index:4;left:23px;top:119px;width:244px;height:201px;background:linear-gradient(105deg,#e9c991 0%,#f5ddb0 37%,#e5c38d 100%);clip-path:polygon(6% 0,94% 0,100% 100%,0 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--green);box-shadow:inset 15px 0 #cdab75}
+.bag-front:before,.bag-front:after{content:'';position:absolute;top:2px;bottom:0;width:1px;background:#ac82565c;transform:rotate(-4deg)}
+.bag-front:before{left:17px}.bag-front:after{right:17px;transform:rotate(4deg)}
+.bag-front span{font:800 37px/.92 'Bricolage Grotesque',sans-serif;letter-spacing:-.08em;text-align:center}
+.bag-front i{font-style:normal;font-size:31px;line-height:1;color:#8da954;margin-top:10px}
+.bag-flap{position:absolute;z-index:5;top:95px;left:35px;width:220px;height:34px;background:linear-gradient(#f7dfb4,#d8b47f);clip-path:polygon(0 0,100% 0,92% 100%,8% 100%);transform-origin:center top;opacity:0}
+.journey-stamp{position:absolute;z-index:3;bottom:4%;left:3%;width:122px;height:122px;border-radius:50%;border:1px solid #c8ddab8a;color:#d9e9c7;display:grid;place-items:center;text-align:center;padding:16px;font-size:10px;font-weight:800;letter-spacing:.15em;line-height:1.55;transform:rotate(-12deg)}
+.journey-track{position:absolute;z-index:10;bottom:0;left:0;width:100%;height:5px;background:#ffffff29}.journey-track span{display:block;width:100%;height:100%;background:var(--gold);transform:scaleX(0);transform-origin:left}
+.delivery-note{background:#e7ecdb;padding:44px 0;color:var(--deep)}
+.delivery-note-inner{display:flex;align-items:center;gap:clamp(22px,4vw,70px)}
+.delivery-note .eyebrow{margin:0;white-space:nowrap;color:#477445}.delivery-note h3{font:800 28px/1.1 'Bricolage Grotesque',sans-serif;letter-spacing:-.05em;margin:0;white-space:nowrap}.delivery-note p{font-size:14px;line-height:1.5;margin:0;max-width:650px}
+.motion-enhanced .journey-stage{height:100vh}
+.motion-enhanced .journey-visual .bag-art,.motion-enhanced .journey-visual .bag-produce,.motion-enhanced .bag-handle,.motion-enhanced .bag-flap,.motion-enhanced .bag-mouth,.motion-enhanced .journey-word,.motion-enhanced .journey-cta,.motion-enhanced .journey-caption{will-change:transform,opacity}
+@media(max-width:959px),(max-height:699px){.convenience[data-fx-fixa]{height:auto!important}.convenience .fx-palco{position:static;height:auto;overflow:hidden}.convenience-grid{height:auto;padding-block:80px;grid-template-columns:1fr 1fr}.journey-visual{height:510px;min-height:0}.journey-visual .bag-art{transform:scale(.82) rotate(-8deg)}.journey-word{font-size:18px}.journey-stamp{width:95px;height:95px;font-size:8px}.journey-track{display:none}}
+@media(max-width:680px){.convenience-grid{display:flex;flex-direction:column;gap:15px;padding-block:75px 65px}.convenience-copy{padding:0}.convenience h2{font-size:clamp(46px,11vw,68px)}.convenience-copy>p:not(.eyebrow){font-size:16px;margin-bottom:20px}.journey-caption{margin-top:24px}.journey-cta{margin-top:19px}.journey-visual{width:100%;height:410px}.journey-visual .bag-art{margin-top:35px;transform:scale(.78) rotate(-8deg)}.journey-word{font-size:15px}.word-one{top:12%;left:0}.word-two{top:14%;right:0}.word-three{right:0;bottom:15%}.journey-stamp{bottom:5%;left:0;width:78px;height:78px;padding:9px;font-size:7px}.delivery-note-inner{display:block}.delivery-note h3{margin:8px 0}.delivery-note p{max-width:460px}}
+@media(prefers-reduced-motion:reduce){.convenience[data-fx-fixa]{height:auto!important}.convenience .fx-palco{position:static;height:auto}.journey-track{display:none}}
+.no-js .convenience[data-fx-fixa]{height:auto!important}.no-js .convenience .fx-palco{position:static;height:auto}

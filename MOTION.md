@@ -1,0 +1,12 @@
+# Plano de movimento
+
+O movimento usa JavaScript Vanilla, `requestAnimationFrame` e o motor local da skill `sites-incriveis` para associar transformações à posição de rolagem. Não há CDN nem etapa de build. As cenas avançadas só são ativadas em telas com pelo menos 960 × 700 px e sem preferência por movimento reduzido. O motor permanece sem alterações em `js/sites-incriveis.js` e `css/sites-incriveis.css`; a coreografia própria está em `js/main.js` e `css/journey.css`.
+
+| Cena | Estado inicial | Durante a rolagem | Estado final e ligação | Mobile e fallback | Recursos |
+| --- | --- | --- | --- | --- | --- |
+| Hero | Headline e foto da fachada em moldura vertical. | O texto recua e uma segunda instância da mesma foto cresce por máscara, acompanhando proporcionalmente a rolagem. | A fachada ocupa uma faixa panorâmica legível e dá passagem à faixa amarela e aos serviços. | A composição vertical original permanece, com entrada curta. Sem JavaScript, a fotografia e os links estão visíveis. | Fotografia real `images/image_1-2000.jpg`; CSS `clip-path`. |
+| Serviços | O açougue ocupa o primeiro capítulo. | Um palco fixo apresenta quatro capítulos. O próximo revela-se por máscara horizontal, mantendo um capítulo legível de cada vez. | O último capítulo libera a rolagem para a história. | Quatro composições empilhadas, sem fixação. Sem JavaScript, todas aparecem no fluxo normal. | Fotografia real do açougue e ilustrações CSS leves. |
+| História | O ano 1996 aparece em grande escala. | O número muda de escala, posição e inclinação; os três parágrafos ganham ênfase em etapas. | O ano se assenta ao lado do relato, que conduz à entrega. | Tipografia e texto estáticos em fluxo vertical. | Tipografia existente e CSS `transform`/`opacity`. |
+| Jornada das compras | A sacola surge e se abre no palco fixo. | Três produtos SVG aparecem, se organizam e entram individualmente na sacola. A frase lateral acompanha os três atos. | A aba fecha, a sacola avança e o convite ao WhatsApp aparece; informações de pagamento e endereço seguem no fluxo. | Ilustração estática completa e CTA sempre visível. | SVG inline, CSS e motor local de cena fixa com progresso contínuo. |
+
+As animações preservam a ordem semântica do HTML. O conteúdo principal permanece disponível com JavaScript bloqueado; nesse caso, o menu mobile também fica visível no fluxo da página. `prefers-reduced-motion` desativa a progressão de cena e as entradas animadas. A sacola é uma ilustração gráfica, não uma fotografia de produto.
